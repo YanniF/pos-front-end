@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Indexed DB</title>  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>API Indexed DB</h1>
+    <form>
+      <p>
+        <label for="codigo">Código: 
+          <input type="number" id="codigo" min="0" autofocus>
+        </label>
+      </p>
+      <p>
+      <label for="titulo">Título: 
+        <input type="text" id="titulo">
+      </label>
+      </p>
+      <p>
+      <label for="autor">Autor: 
+        <input type="text" id="autor">
+      </label>
+      </p>
+      <p><input type="button" id="btnForm" value="Cadastrar"></p>
+    </form>
+    <hr>
+    <section>
+      <h2>Lista completa</h2>
+      <div id="lista"></div>      
+      <p><input type="button" id="btnListar" value="Listar"></p>
+    </section>
+    <hr>
+    <section>
+      <h2>Lista de autor</h2>
+      <form>
+        <p>
+          <label for="autor2">Nome: 
+            <input type="text" id="autor2">
+          </label>
+        </p>
+        <p><input type="button" id="btnListarAutor" value="Listar"></p>
+      </form>     
+      <div id="listaAutor"></div>      
+    </section>
+    <hr>
+    <section>
+      <h2>Consultar livro por código</h2>
+      <form>
+        <p>
+          <label for="codigo1">Código: 
+            <input type="number" id="codigo1" min="0">
+          </label>
+        </p>
+        <p><input type="button" id="btnConsultar" value="Consultar"></p>
+      </form>
+      <dl>
+        <dt>Código: </dt><dd id="codigodd"></dd>
+        <dt>Título: </dt><dd id="titulodd"></dd>
+        <dt>Autor: </dt><dd id="autordd"></dd>
+      </dl>
+    </section>
+    <hr>
+    <section>
+      <h2>Consultar livro por autor</h2>
+      <form>
+        <p>
+          <label for="autor1">Autor: 
+            <input type="text" id="autor1">
+          </label>
+        </p>
+        <p><input type="button" id="btnConsultarAutor" value="Consultar"></p>
+      </form>
+      <dl>
+        <dt>Código: </dt><dd id="codigodda"></dd>
+        <dt>Título: </dt><dd id="titulodda"></dd>
+        <dt>Autor: </dt><dd id="autordda"></dd>
+      </dl>
+    </section>
+    <hr>
+    <section>
+      <h2>Excluir livro</h2>
+      <form>
+        <p>
+          <label for="codigo2">Código: 
+            <input type="number" id="codigo2" min="0">
+          </label>
+        </p>
+       <p><input type="button" id="btnExcluir" value="Excluir"></p>
+      </form>
+    </section>
+    <hr>
+    <section>
+      <h2>Alterar livro</h2>
+      <form>
+        <p>
+          <label for="codigo3">Código: 
+            <input type="number" id="codigo3" min="0">
+          </label>
+        </p>
+        <p>
+          <label for="titulo3">Título: 
+            <input type="text" id="titulo3">
+          </label>
+        </p>
+        <p>
+        <label for="autor3">Autor: 
+          <input type="text" id="autor3">
+        </label>
+        </p>
+        <p><input type="button" id="btnAlterar" value="Alterar"></p>
+      </form>
+    </section>
+  </div>
+    
+  <script src="script.js"></script>
+</body>
+</html>
