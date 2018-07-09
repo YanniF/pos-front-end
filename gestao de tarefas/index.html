@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,6 +22,9 @@
     table {
       font-size: 1.2em
     }
+    table .btn:not(:first-child) {
+      margin-left: 5px;
+    }
     .well .col-sm-4 .row{
       margin-bottom: 10px;
     }    
@@ -40,13 +42,13 @@
             <th>Tarefa</th>
             <th>Data limite</th>
             <th>Prioridade</th>
-            <th></th>
+            <th>&nbsp;</th>
           </tr>
         </thead>
         <tbody id="tabela"></tbody>
         <tfoot>
           <tr>
-            <td></td>
+            <td>&nbsp;</td>
             <td>
               <input class="form-control" type="text" id="tarefa" placeholder="Tarefa">
             </td>
