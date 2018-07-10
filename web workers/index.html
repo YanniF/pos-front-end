@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  
+  <title>Gestão de Tarefas</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+  <style>
+    .container {
+      margin-top: 30px;
+    }
+    .row {
+      margin-top: 50px;
+    }    
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Web Workers</h1>
+    <div class="row">
+      <div class="col-xs-12">
+        <form class="form-inline">
+          <div class="input-group">
+            <label for="valor1" class="input-group-addon">Valor 1: </label>
+            <input type="number" id="valor1" class="form-control">
+          </div>
+          <div class="input-group">
+            <label for="valor2" class="input-group-addon">Valor 2: </label>
+            <input type="number" id="valor2" class="form-control">
+          </div>
+          <div class="input-group">
+            <button id="btnSomar" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Resultado</div>
+          <div class="panel-body">
+            <p id="resultado"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
