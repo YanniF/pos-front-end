@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>D3.js</title>
+</head>
+<body>
+  <h1>D3.js</h1>
+  <p id="p1">Paragrafinho</p>
+  <p>Parágrafo</p>
+  <p>Paragrafão</p>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+  <script>
+    function executa() {
+      d3.selectAll('p')
+      .data([10, 20, 30])
+      .text(d => d);
+
+      // document.querySelectorAll('p').forEach(
+      //   i => console.log(i.__data__)
+      // )
+    }
+
+    executa();
+  </script>
+</body>
+</html>

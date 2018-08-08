@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>D3.js</title>
+
+  <style>
+    .cor {
+      background-color: #c8f442;
+    }
+  </style>
+</head>
+<body>
+  <h1>D3.js</h1>
+  <p id="p1">Paragrafinho</p>
+  <p>Parágrafo</p>
+  <p>Paragrafão</p>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+  <script>
+    function executa() {
+      // d3.select('#p1').style('background-color', '#c8f442');
+      d3.select('#p1').classed('cor', true).html('Para ra grafinho');
+      d3.selectAll('p').styles({
+        'font-size': '20px',
+        'padding': '5px 10px'
+      });
+    }
+
+    executa();
+  </script>
+</body>
+</html>

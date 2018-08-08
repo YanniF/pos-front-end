@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>D3.js</title>
+
+  <style>
+    #grafico {
+      border: 2px solid #4e4e4e;
+      border-radius: 3px;
+    }
+    .barra {
+      fill: #e92d2d;
+    }
+    .rotulo {
+      text-anchor: end;
+      font-size: 22px;
+      fill: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>D3.js</h1>
+  <svg id="grafico"></svg>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script>
+    function executa() {
+      const dados = [65, 25, 11, 110, 5, 48];
+      const min = d3.min(dados);
+      const max = d3.max(dados);
+      const largura = 600;
+      const altura = 400;
+      const svg = d3.select('#grafico');
+      let x, y;
+
+      svg.attr('width', largura).attr('height', altura);
+      x = d3.scaleLinear().domain([0, max]).range([0, largura]);
+      y = d3.scaleLinear().domain([0, dados.length]).range([0, altura]);
+
+      svg.selectAll('.barra')
+      .data(dados)
+      .enter() 
+      .append('rect')
+      .classed('barra', true)
+      .attr('x', 0)
+      .attr('y', (d, i) => y(i))
+      .attr('width', d => x(d))
+      .attr('height', y(1) * .9);
+
+      svg.selectAll('.rotulos')
+      .data(dados)
+      .enter() 
+      .append('text')
+      .classed('rotulo', true)
+      .text(d => d)
+      .attr('x', d => x(d))
+      .attr('y', (d, i) => y(i))
+      .attr('dx', -5)
+      .attr('dy', (d, i) => y(1) * .9 * 2 / 3);
+    }
+
+    executa();
+  </script>
+</body>
+</html>

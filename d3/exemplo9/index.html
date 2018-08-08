@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>D3.js</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <h1>Venda de Pastéis</h1>
+  <svg id="grafico"></svg>
+  <p>
+    <button onclick="crescente()">Ordem cresecente</button>
+    <button onclick="decrescente()">Ordem decresecente</button>
+    <button onclick="alfabetica()">Ordem alfabética</button>
+  </p>
+  <p>
+    <h3>Seleção</h3>
+    <p>
+      Chave: <span id="chaveSelecionada"></span><br>
+      Valor: <span id="valorSelecionado"></span>
+    </p>
+  </p>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+
+    let p, dados;
+
+    function executa() {
+      
+      dados = [
+        {chave: 'Frango', valor: 69},
+        {chave: 'Carne', valor: 81},
+        {chave: 'Vegetariano', valor: 39},
+        {chave: 'Queijo', valor: 120},
+        {chave: 'Banana', valor: 73},
+        {chave: 'Goiabada', valor: 42}
+      ];
+
+      p = new GraficoDeColunas({
+        seletor: '#grafico',
+        dados: dados,
+        altura: 400,
+        largura: 600,
+        tituloX: 'Tipos de pastéis',
+        tituloY: 'Quantidade vendida',
+        callback: clicado
+      });
+    }   
+
+    function crescente() {
+      dados.sort((a, b) => a.valor - b.valor);
+      p.atualiza(dados);
+    }
+
+    function decrescente() {
+      dados.sort((a, b) => b.valor - a.valor);
+      p.atualiza(dados);
+    }
+
+    function alfabetica() {
+      dados.sort((a, b) => a.chave.localeCompare(b.chave));
+      p.atualiza(dados);
+    }
+
+    function clicado(d) {
+      document.getElementById('chaveSelecionada').innerHTML = d.chave;
+      document.getElementById('valorSelecionado').innerHTML = d.valor;
+    }
+
+    executa();
+  </script>
+</body>
+</html>

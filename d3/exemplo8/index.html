@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>D3.js</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <h1>Venda de Pastéis</h1>
+  <svg id="grafico"></svg>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+
+    function executa() {
+      let dados = [];
+
+      dados = [
+        {chave: 'Frango', valor: 69},
+        {chave: 'Carne', valor: 81},
+        {chave: 'Vegetariano', valor: 39},
+        {chave: 'Queijo', valor: 120},
+        {chave: 'Banana', valor: 73},
+        {chave: 'Goiabada', valor: 42}
+      ];
+
+      const p = new GraficoDeColunas({
+        seletor: '#grafico',
+        dados: dados,
+        altura: 500,
+        largura: 700,
+        tituloX: 'Tipos de pastéis',
+        tituloY: 'Quantidade vendida'
+      });
+
+      // dados.push({chave: 'Pizza', valor: 101});
+      // dados.sort((a, b) => a.valor - b.valor);
+      
+      p.atualiza(dados);
+    }   
+
+    executa();
+  </script>
+</body>
+</html>

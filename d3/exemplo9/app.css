@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#grafico {
+  border: 2px solid #4e4e4e;
+  border-radius: 3px;
+}
+
+.barra {
+  cursor: pointer;
+}
+
+.rotulo {
+  text-anchor: middle;
+  font-size: 20px;
+  fill: #333;
+}
+
+#eixoX text {
+  font-size: 120%;
+  text-anchor: end;
+  transform: translate(-8px, 2px) rotate(-45deg);
+}
+
+#eixoY text {
+  font-size: 120%;
+}
+
+#grade path,
+#grade .tick:nth-child(2) {
+  display: none;
+}
+
+#grade line {
+  stroke: #707070;
+  stroke-dasharray: 2,2;
+}
+
+.titulo-eixo {
+  text-anchor: middle;
+}
+
+button {
+  padding: 7px 10px;
+  color: #fff;
+  background-color: #1F77B4;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+button:hover {
+  background-color: #16649c;
+}

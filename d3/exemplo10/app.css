@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.barra {
+  cursor: pointer;
+}
+
+.rotulo {
+  text-anchor: middle;
+  font-size: 20px;
+  fill: #333;
+}
+
+#eixoX text {
+  font-size: 120%;
+  text-anchor: end;
+  transform: translate(-8px, 2px) rotate(-45deg);
+}
+
+#eixoY text {
+  font-size: 120%;
+}
+
+#grade path,
+#grade .tick:nth-child(2) {
+  display: none;
+}
+
+#grade line {
+  stroke: #707070;
+  stroke-dasharray: 2,2;
+}
+
+.titulo-eixo {
+  text-anchor: middle;
+}
+
+.linha {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+
+.ponto {
+  fill: #eee;
+  stroke: #333;
+}

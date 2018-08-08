@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>D3.js</title>
+
+  <style>
+    .barra {
+      background-color: rgb(233, 45, 45);
+      margin-bottom: 5px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>D3.js</h1>
+  <div id="grafico"></div>
+  <!-- <div>Paragrafinho</div>
+  <div>Parágrafo</div>
+  <div>Paragrafão</div> -->
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+  <script>
+    function executa() {
+      // const divs = d3.select('body').selectAll('div')
+      // .data([10, 20, 30, 40, 50]);
+      
+      // divs.enter() // trata os dados que sobraram
+      // .append('div');
+      
+      // divs.exit() // trata os elementos que sobraram
+      // .remove();
+
+      // d3.select('body').selectAll('div')
+      // .text(d => d)
+      // .style('width', d => d * 10 + 'px');
+
+      d3.select('#grafico').selectAll('div')
+      .data([10, 20, 30, 40, 50])
+      .enter()
+      .append('div')
+      .classed('barra', true)
+      .text(d => d)
+      .style('width', d => d * 10 + 'px');
+    }
+
+    executa();
+  </script>
+</body>
+</html>

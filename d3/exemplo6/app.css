@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#grafico {
+  border: 2px solid #4e4e4e;
+  border-radius: 3px;
+}
+
+.barra {
+  fill: #e92d2d;
+}
+
+.rotulo {
+  text-anchor: end;
+  font-size: 20px;
+  fill: #fff;
+}

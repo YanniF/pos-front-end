@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#grafico {
+  border: 2px solid #4e4e4e;
+  border-radius: 3px;
+}
+
+.rotulo {
+  text-anchor: middle;
+  font-size: 20px;
+  fill: #333;
+}
+
+#eixoX text {
+  font-size: 120%;
+  text-anchor: end;
+  transform: translate(-8px, 2px) rotate(-45deg);
+}
+
+#eixoY text {
+  font-size: 120%;
+}
+
+#grade path,
+#grade .tick:nth-child(2) {
+  display: none;
+}
+
+#grade line {
+  stroke: #707070;
+  stroke-dasharray: 2,2;
+}
