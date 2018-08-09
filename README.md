@@ -1,7 +1,6 @@
 # Front-end
 ## Exercícios da pós da disciplina de Front-end
 
-* Angular
 * APIs HTML
   * File
   * Geolocalização
@@ -10,3 +9,4 @@
   * Web Storage
   * Web Workers
 * D3.js
+* Angular
