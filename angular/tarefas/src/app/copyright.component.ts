@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'copyright',
   template: `
-    <p><small>&copy; {{ano}} {{autor}} &copy;</small></p>
+    <p><small>&copy; {{ano}} {{autor | titlecase}} &copy;</small></p>
   `,
   styles: [`
     p {
@@ -18,6 +18,6 @@ export class CopyrightComponent {
 
   constructor() {
     this.ano = 2018;
-    this.autor = 'Yanni Fraga';
+    this.autor = 'yanni fraga';
   }
 }
