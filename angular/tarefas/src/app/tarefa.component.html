@@ -1,0 +1,15 @@
+<h2>{{tarefa.tarefa}}</h2>
+<dl>
+  <dt>Código:</dt>
+    <dd>{{tarefa.codigo}}</dd>
+  <dt>Data:</dt>
+    <dd>{{tarefa.data | date: 'dd/MM/yyyy'}}</dd>
+  <dt>Prioridade:</dt>
+    <dd>
+      <span [hidden]="tarefa.prioridade != 1">alta</span>
+      <span [hidden]="tarefa.prioridade != 2">média</span>
+      <span [hidden]="tarefa.prioridade != 3">baixa</span>
+    </dd>
+  <dt>Projeto:</dt>
+    <dd>{{tarefa.codigoProjeto}}</dd>
+</dl>
